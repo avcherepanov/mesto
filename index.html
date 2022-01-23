@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto Russia</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+  <header class="header">
+    <div class="header__logo"></div>
+  </header>
+  <main>
+    <section class="profile">
+      <img src="./images/image_Kusto.jpg" alt="Изображение профиля" class="profile__avatar">
+      <div class="profile__info">
+        <div class="profile__container">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button type="button" class="profile__edit-button"></button>
+        </div>
+        <h2 class="profile__about">Исследователь океана</h2>
+      </div>
+      <button type="button" class="profile__add-button"></button>
+    </section>
+    <section class="elements">
+      <div class="element">
+        <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
+        <div class="element__info">
+          <h2 class="element__info-caption">Карачаевск-Камчатск</h2>
+          <button type="button" class="element__info-button element__info-button_active"></button>
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Elbrus.jpg" alt="Эльбрус">
+        <div class="element__info">
+          <h2 class="element__info-caption">Эльбрус</h2>
+          <button type="button" class="element__info-button element__info-button_active"></button>
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/dombay.jpg" alt="Домбай">
+        <div class="element__info">
+          <h2 class="element__info-caption">Домбай</h2>
+          <button type="button" class="element__info-button element__info-button_active"></button>
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
+        <div class="element__info">
+          <h2 class="element__info-caption">Карачаевск</h2>
+          <button type="button" class="element__info-button element__info-button_active"></button>
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Elbrus.jpg" alt="Эльбрус">
+        <div class="element__info">
+          <h2 class="element__info-caption">Эльбрус</h2>
+          <button type="button" class="element__info-button element__info-button_active"></button>
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/dombay.jpg" alt="Домбай">
+        <div class="element__info">
+          <h2 class="element__info-caption">Домбай</h2>
+          <button type="button" class="element__info-button element__info-button_active"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+  </footer>
+<div class="popup">
+  <div class="popup__container">
+    <form class="popup__form" name="profileData" novalidate>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <input class="popup__input" id="name" name="name" placeholder="Имя" minlength="2" maxlength="40" required>
+      <input class="popup__input" id="about" name="about" placeholder="О себе" minlength="2" maxlength="200" required>
+      <button type="submit" class="popup__button">Сохранить</button>
+    </form>
+    <button type="button" class="popup__close-button"></button>
+  </div>
+
+</div>
+<script src="./scripts/index.js"></script>
+</body>
+</html>
