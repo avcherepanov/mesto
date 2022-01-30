@@ -1,19 +1,15 @@
 .element__info-button {
-    padding: 0;
-    width: 22px;
-    height: 19px;
-    background-image: url(../../../images/like.svg);
-    border: none;
-    background-color: transparent;
-    transition: .2s;
-    outline: none;
+  margin-right: 20px;
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/like.svg);
+  border: none;
+  background-color: transparent;
+  transition: .2s;
+  outline: none;
 }
 
 .element__info-button:hover {
-    opacity: .5;
-    cursor: pointer;
-  }
-
-  .element__info-button:active {
-    background-image: url(../../../images/like_active.svg);
-  }
+  opacity: .5;
+  cursor: pointer;
+}
