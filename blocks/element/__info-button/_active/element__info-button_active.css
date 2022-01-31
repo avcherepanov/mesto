@@ -1,4 +1,4 @@
-.element__info-button_active:active {
+.element__info-button_active {
     background-image: url(../../../../images/like_active.svg);
     background-repeat: no-repeat;
 }
