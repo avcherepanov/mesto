@@ -18,6 +18,7 @@
 @import url(../blocks/element/__info-caption/element__info-caption.css);
 @import url(../blocks/element/__info-button/element__info-button.css);
 @import url(../blocks/element/__info-button/_active/element__info-button_active.css);
+@import url(../blocks/element/__button-element-delete/element__button-element-delete.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/popup/popup.css);
@@ -28,3 +29,5 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__button/popup__button.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
+@import url(../blocks/popup/__container-image/popup__container-image.css);
+@import url(../blocks/popup/__image/popup__image.css);

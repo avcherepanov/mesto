@@ -23,64 +23,51 @@
       <button type="button" class="profile__add-button" aria-label="Редактировать"></button>
     </section>
     <section class="elements">
-      <div class="element">
-        <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
-        <div class="element__info">
-          <h2 class="element__info-caption">Карачаевск-Камчатск</h2>
-          <button type="button" class="element__info-button element__info-button_active" aria-label="Лайк"></button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Elbrus.jpg" alt="Эльбрус">
-        <div class="element__info">
-          <h2 class="element__info-caption">Эльбрус</h2>
-          <button type="button" class="element__info-button element__info-button_active" aria-label="Лайк"></button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/dombay.jpg" alt="Домбай">
-        <div class="element__info">
-          <h2 class="element__info-caption">Домбай</h2>
-          <button type="button" class="element__info-button element__info-button_active" aria-label="Лайк"></button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/karachaevsk.jpg" alt="Карачаевск">
-        <div class="element__info">
-          <h2 class="element__info-caption">Карачаевск</h2>
-          <button type="button" class="element__info-button element__info-button_active" aria-label="Лайк"></button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Elbrus.jpg" alt="Эльбрус">
-        <div class="element__info">
-          <h2 class="element__info-caption">Эльбрус</h2>
-          <button type="button" class="element__info-button element__info-button_active" aria-label="Лайк"></button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/dombay.jpg" alt="Домбай">
-        <div class="element__info">
-          <h2 class="element__info-caption">Домбай</h2>
-          <button type="button" class="element__info-button element__info-button_active" aria-label="Лайк"></button>
-        </div>
-      </div>
     </section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
   </footer>
-  <div class="popup">
+  <div class="popup popup-edit">
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__form" name="profileData" novalidate>
-        <input class="popup__input" id="name" name="name" placeholder="Имя" required>
-        <input class="popup__input" id="about" name="about" placeholder="О себе" minlength="2" maxlength="200" required>
+        <input class="popup__input popup__input-name" placeholder="Имя" required>
+        <input class="popup__input popup__input-about" placeholder="О себе" minlength="2" maxlength="200" required>
         <button type="submit" class="popup__button" aria-label="Сохранить">Сохранить</button>
       </form>
       <button type="button" class="popup__close-button" aria-label="Закрыть"></button>
     </div>
   </div>
+  <div class="popup popup-open-element">
+    <div class="popup__container-image">
+      <img class="popup__image" alt="картинка">
+      <p class="popup__text"></p>
+      <button class="popup__close-button" type="button">
+      </button>
+    </div>
+  </div>
+  <div class="popup popup-add-element">
+    <div class="popup__container">
+      <h2 class="popup__title">Новое место</h2>
+      <button type="button" class="popup__close-button" aria-label="Закрыть"></button>
+      <form class="popup__form" name="profileData" novalidate>
+        <input class="popup__input popup__input-name" placeholder="Название" required>
+        <input class="popup__input popup__input-about" placeholder="Ссылка на картинку" minlength="2" maxlength="200" required>
+        <button type="submit" class="popup__button" aria-label="Сохранить">Создать</button>
+      </form>
+    </div>
+  </div>
+  <template class="temlate">
+    <div class="element">
+      <button class="element__button-element-detele"></button>
+      <img class="element__image" src="" alt="">
+      <div class="element__info">
+        <h2 class="element__info-caption"></h2>
+        <button type="button" class="element__info-button" aria-label="Лайк"></button>
+      </div>
+    </div>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
 </html>
