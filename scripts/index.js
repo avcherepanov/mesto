@@ -97,8 +97,7 @@ function handleCardFormSubmit (evt) {
   evt.preventDefault()
   sectionElements.prepend(createCard(titleInputValue.value, descriptionInputValue.value))
   closePopup(popupAdd)
-  titleInputValue.reset()
-  descriptionInputValue.reset()
+  popupAdd.reset()
 }
 
 popupFormSubmitAdd.addEventListener('submit', handleCardFormSubmit);
