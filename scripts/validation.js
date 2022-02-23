@@ -26,7 +26,7 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonElement, buttonElementText, validationConfig) => {
+const toggleButtonState = (inputList, buttonElement, validationConfig) => {
   if (hasInvalidInput(inputList)) {
     buttonElement.classList.add(validationConfig.inactiveButtonClass);
     buttonElement.setAttribute("disabled", "");
@@ -40,23 +40,19 @@ const setEventListeners = (formElement, validationConfig) => {
   const inputList = Array.from(
     formElement.querySelectorAll(validationConfig.inputSelector)
   );
-  // Пробегаемся по каждому импуту чтобы добавить им обработчик 'input'
   const buttonElement = formElement.querySelector(validationConfig.submitButtonSelector);
-  const buttonElementText = formElement.querySelector(validationConfig.submitButtonSelectorText);
-  toggleButtonState(inputList, buttonElement, buttonElementText, validationConfig);
+  toggleButtonState(inputList, buttonElement, validationConfig);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", () => {
-      isValid(formElement, inputElement, validationConfig); // Передаем в колбек функция IsValid
-      toggleButtonState(inputList, buttonElement, buttonElementText, validationConfig);
+      isValid(formElement, inputElement, validationConfig);
+      toggleButtonState(inputList, buttonElement, validationConfig);
     });
   });
 };
 
 
 const enableValidation = (validationConfig) => {
-    // Вытаскиваем все формы с помощию массива
     const formList = Array.from(document.querySelectorAll(validationConfig.formSelector));
-    // Пробегаемся по массиву и сбрасываем ему отправку
     formList.forEach((formElement) => {
       formElement.addEventListener("input", (evt) => {
         evt.preventDefault();
@@ -69,7 +65,6 @@ const validationConfig = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button',
-  submitButtonSelectorText: '.popup__button-text',
   inactiveButtonClass: 'popup__button_disabled',
   inputErrorClass: 'popup__input_type-error',
   errorClass: 'popup__input-error_active'
