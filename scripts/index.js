@@ -11,9 +11,9 @@ const popupCloseButtonAdd = popupAdd.querySelector('.popup__close-button')
 const popupFormSubmitAdd = popupAdd.querySelector('.popup__form')
 const submitButtonCreateCard = popupAdd.querySelector(".popup__button");
 
-const formElement = document.querySelector('.popup__container')
-const nameInput = formElement.querySelector('.popup__input-name')
-const aboutInput = formElement.querySelector('.popup__input-about')
+const formProfileElement = document.querySelector('.popup__container')
+const nameInput = formProfileElement.querySelector('.popup__input-name')
+const aboutInput = formProfileElement.querySelector('.popup__input-about')
 
 
 const profileName = document.querySelector('.profile__name')
@@ -74,7 +74,7 @@ function handleProfileFormSubmit (evt) {
   profileAbout.textContent = aboutInput.value
   closePopup(popupEdit)
 }
-formElement.addEventListener('submit', handleProfileFormSubmit)
+formProfileElement.addEventListener('submit', handleProfileFormSubmit)
 
 function createCard(name, link) {
     const card = elementTemplate.querySelector('.element').cloneNode(true)
@@ -112,7 +112,7 @@ function handleCardFormSubmit(evt) {
   evt.preventDefault()
   sectionElements.prepend(createCard(titleInputValue.value, descriptionInputValue.value))
   closePopup(popupAdd)
-  popupAdd.reset()
+  popupFormSubmitAdd.reset()
   submitButtonCreateCard.setAttribute("disabled", "")
   submitButtonCreateCard.classList.add(validationConfig.inactiveButtonClass)
 }

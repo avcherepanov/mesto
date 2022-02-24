@@ -1,5 +1,5 @@
 .element__button-element-detele {
-    position: absolute;
+    position: absolute; 
     width: 18px;
     height: 19px;
     background-image: url(../../../images/deleteElement.svg);
@@ -10,4 +10,5 @@
     top: 20px;
     background-color: transparent;
     cursor: pointer;
+    z-index: 1;
 }
