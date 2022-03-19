@@ -32,11 +32,12 @@ export class Card {
     this._elementHeart.classList.toggle('element__info-button_active')
   }
   _deleteCard() {
-    this._elementDeleteCard.closest('.element').remove()
+    this._element.remove()
   }
   _openPopupCard() {
     titlePopupPreview.textContent = this._text
     imagePopupPreview.src = this._image
+    imagePopupPreview.alt = this._image
 
     openPopup(popupOpenElements)
   }
