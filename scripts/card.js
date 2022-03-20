@@ -37,7 +37,7 @@ export class Card {
   _openPopupCard() {
     titlePopupPreview.textContent = this._text
     imagePopupPreview.src = this._image
-    imagePopupPreview.alt = this._image
+    imagePopupPreview.alt = this._text
 
     openPopup(popupOpenElements)
   }
