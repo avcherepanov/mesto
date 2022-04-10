@@ -1,17 +1,17 @@
-import {titlePopupPreview, imagePopupPreview, openPopup, popupOpenElements} from './index.js'
 export class Card {
-  constructor(text, image, cardTemplateSelector) {
+  constructor(text, image, cardTemplateSelector, handleCardClick) {
     this._text = text;
     this._image = image;
     this._cardTemplateSelector = cardTemplateSelector;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
-      this.cardItem = document
-      .querySelector(this._cardTemplateSelector)
-      .content.querySelector('.element')
-      .cloneNode(true)
-      return this.cardItem
+    this.cardItem = document
+    .querySelector(this._cardTemplateSelector)
+    .content.querySelector('.element')
+    .cloneNode(true)
+    return this.cardItem
   }
 
   renderCard() {
@@ -28,20 +28,19 @@ export class Card {
 
     return this._element
   }
+
   _cardLike() {
     this._elementHeart.classList.toggle('element__info-button_active')
   }
+
+  //_deleteCard() {
+  //  this._elementDeleteCard.closest('.element').remove();
+  //}
+  
   _deleteCard() {
     this._element.remove()
   }
-  _openPopupCard() {
-    titlePopupPreview.textContent = this._text
-    imagePopupPreview.src = this._image
-    imagePopupPreview.alt = this._text
 
-    openPopup(popupOpenElements)
-  }
-  
   _setEventListeners() {
     this._elementHeart.addEventListener('click', () => {
       this._cardLike()
@@ -50,7 +49,7 @@ export class Card {
       this._deleteCard()
     })
     this._elementImage.addEventListener('click', () => {
-      this._openPopupCard()
+      this._handleCardClick(this._text, this._image);
     })
   }
 }
