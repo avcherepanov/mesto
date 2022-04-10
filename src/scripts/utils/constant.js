@@ -22,7 +22,7 @@ export const profileName = profile.querySelector('.profile__name')
 export const profileAbout = profile.querySelector('.profile__about')
 
 export const sectionElements = document.querySelector('.elements')
-export const allCards = ".elements"
+//export const allCards = ".elements"
 
 export const validationConfig = {
   formSelector: '.popup__form',

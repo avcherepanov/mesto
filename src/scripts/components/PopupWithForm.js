@@ -14,6 +14,7 @@ export class PopupWithForm extends Popup {
     });
 
     return this._formValues;
+    //return formValues;
   }
 
   setEventListeners() {
@@ -21,6 +22,8 @@ export class PopupWithForm extends Popup {
     this._form.addEventListener("submit", (evt) => {
       evt.preventDefault();
       this._callBack(this._getInputValues());
+      //new
+      this.close();
     });
   }
 
