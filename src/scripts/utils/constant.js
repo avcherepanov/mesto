@@ -6,8 +6,6 @@ export const popupEditJobInput = popupEdit.querySelector('.popup__input-about');
 export const popupEditForm = popupEdit.querySelector('.popup__form');
 
 export const popupAdd = document.querySelector('.popup-add-element')
-//export const titleInputValue = popupAdd.querySelector('.popup__input-name')
-//export const descriptionInputValue = popupAdd.querySelector('.popup__input-about')
 export const popupCloseButtonAdd = popupAdd.querySelector('.popup__close-button')
 export const popupFormSubmitAdd = popupAdd.querySelector('.popup__form')
 export const submitButtonCreateCard = popupAdd.querySelector(".popup__button")
