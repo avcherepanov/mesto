@@ -24,7 +24,7 @@ const addCardValidator = new FormValidator(validationConfig, popupFormSubmitAdd)
 addCardValidator.enableValidation();
 
 //  userInfo
-const userInfo = new UserInfo({
+const userInfoEx = new UserInfo({
   titleSelector: ".profile__name",
   jobSelector: ".profile__about"
 });
@@ -32,7 +32,7 @@ const userInfo = new UserInfo({
 // форма edit profile
 const profilePopup = new PopupWithForm('.popup-edit', {
   submitEvent: (formData) => {
-    userInfo.setUserInfo({
+    userInfoEx.setUserInfo({
      name: formData.username,
      job: formData.about,
     });
@@ -42,7 +42,7 @@ const profilePopup = new PopupWithForm('.popup-edit', {
 profilePopup.setEventListeners();
 
 profileOpenPopupButton.addEventListener("click", function () {
-  const getInfo = userInfo.getUserInfo();
+  const getInfo = userInfoEx.getUserInfo();
   popupEditNameInput.value = getInfo.name;
   popupEditJobInput.value = getInfo.job;
   profilePopup.open();
@@ -73,7 +73,7 @@ function createCard(text, image) {
 
 const cardPopup = new PopupWithForm(".popup-add-element", {
   submitEvent: (formData) => {
-    console.log(formData);
+  //  console.log(formData);
     const card = createCard(formData.text, formData.link);
     cardSection.prependItem(card);
     cardPopup.close();
@@ -93,11 +93,3 @@ const cardSection = new Section(
   '.elements'
 );
 cardSection.renderItem();
-
-
-profileOpenPopupButton.addEventListener("click", function () {
-  const getInfo = userInfo.getUserInfo();
-  popupEditNameInput.value = getInfo.name;
-  popupEditJobInput.value = getInfo.job;
-  profilePopup.open();
-});
