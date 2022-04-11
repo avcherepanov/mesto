@@ -30,22 +30,22 @@ const userInfo = new UserInfo({
 });
 
 // форма edit profile
-//const profilePopup = new PopupWithForm(".popup-edit", {
-//  submitEvent: (formData) => {
- //   userInfo.setUserInfo({
- //     name: formData.username,
- //     job: formData.about,
-//    });
-//    profilePopup.close();
-//  },
-//});
-//profilePopup.setEventListeners();
+const profilePopup = new PopupWithForm('.popup-edit', {
+  submitEvent: (formData) => {
+    userInfo.setUserInfo({
+     name: formData.username,
+     job: formData.about,
+    });
+    profilePopup.close();
+  },
+});
+profilePopup.setEventListeners();
 
 
-//profileAddBtn.addEventListener("click", function () {
-//  addCardValidator.toggleButtonState();
-//  cardPopup.open();
-//});
+profileAddBtn.addEventListener("click", function () {
+  addCardValidator.toggleButtonState();
+  cardPopup.open();
+});
 
 // popup picture
 const popupWithImage = new PopupWithImage('.popup-open-element');
@@ -64,15 +64,15 @@ function createCard(text, image) {
 }
 
 
-//const cardPopup = new PopupWithForm(".popup-add-element", {
-//  submitEvent: (formData) => {
-//    console.log(formData);
-//    const card = createCard(formData.text, formData.link);
-//    cardSection.prependItem(card);
-//    cardPopup.close();
-//  },
-//});
-//cardPopup.setEventListeners();
+const cardPopup = new PopupWithForm(".popup-add-element", {
+  submitEvent: (formData) => {
+    console.log(formData);
+    const card = createCard(formData.text, formData.link);
+    cardSection.prependItem(card);
+    cardPopup.close();
+  },
+});
+cardPopup.setEventListeners();
 
 // создаем Section (отображаем карточки)
 const cardSection = new Section(
@@ -88,9 +88,9 @@ const cardSection = new Section(
 cardSection.renderItem();
 
 
-//profileOpenPopupButton.addEventListener("click", function () {
-//  const getInfo = userInfo.getUserInfo();
-//  popupEditNameInput.value = getInfo.name;
-//  popupEditJobInput.value = getInfo.job;
-//  profilePopup.open();
-//});
+profileOpenPopupButton.addEventListener("click", function () {
+  const getInfo = userInfo.getUserInfo();
+  popupEditNameInput.value = getInfo.name;
+  popupEditJobInput.value = getInfo.job;
+  profilePopup.open();
+});
