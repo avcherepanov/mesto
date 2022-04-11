@@ -7,7 +7,6 @@ export class PopupWithImage extends Popup {
   }
   open(text, image) {
     super.open();
-    console.log('rrr')
     this._popupImage.src = image
     this._popupText.textContent = text
     this._popupImage.alt = text

@@ -47,7 +47,6 @@ export class Card {
       this._deleteCard();
     })
     this._elementImage.addEventListener('click', () => {
-      console.log('click')
       this._handleCardClick(this._text, this._image);
     })
   }

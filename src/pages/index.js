@@ -41,6 +41,13 @@ const profilePopup = new PopupWithForm('.popup-edit', {
 });
 profilePopup.setEventListeners();
 
+profileOpenPopupButton.addEventListener("click", function () {
+  const getInfo = userInfo.getUserInfo();
+  popupEditNameInput.value = getInfo.name;
+  popupEditJobInput.value = getInfo.job;
+  profilePopup.open();
+});
+
 
 profileAddBtn.addEventListener("click", function () {
   addCardValidator.toggleButtonState();
