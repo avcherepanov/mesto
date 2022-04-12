@@ -73,7 +73,6 @@ function createCard(text, image) {
 
 const cardPopup = new PopupWithForm(".popup-add-element", {
   submitEvent: (formData) => {
-  //  console.log(formData);
     const card = createCard(formData.text, formData.link);
     cardSection.prependItem(card);
     cardPopup.close();
