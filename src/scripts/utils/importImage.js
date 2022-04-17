@@ -7,6 +7,7 @@ export const LikeActive = new URL ('../../images/like_active.svg', import.meta.u
 export const Like = new URL ('../../images/like.svg', import.meta.url);
 export const Logo = new URL ('../../images/__logo.svg', import.meta.url);
 export const Kusto = new URL ('../../images/Kusto.jpg', import.meta.url);
+export const AvatarHover = new URL ('../../images/AvatarHover.svg', import.meta.url);
 
 export const images = [
   { name: 'CloseIcon', image: CloseIcon },
@@ -18,4 +19,5 @@ export const images = [
   { name: 'Like', image: Like },
   { name: 'Logo', image: Logo },
   { name: 'Kusto', image: Kusto },
+  { name: 'AvatarHover', image: AvatarHover },
 ]
