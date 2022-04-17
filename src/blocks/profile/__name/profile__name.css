@@ -15,7 +15,6 @@
     .profile__name {
         font-size: 27px;
         line-height: 32.68px;
-        /*Увеличил ширину до 210px, уменьшил margin справа до 10px*/
         width: 210px;
         margin: 22.25px 10px 14px 0;
     }

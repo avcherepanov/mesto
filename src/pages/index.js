@@ -20,7 +20,6 @@ import { api } from "../scripts/components/Api.js";
 
 let userId;
 
-//валидация
 const editProfileValidator = new FormValidator(validationConfig, popupEditForm);
 editProfileValidator.enableValidation();
 
@@ -171,8 +170,6 @@ avatarPopupValidator.enableValidation();
 const popupDelete = new PopupWithForm(".popup_type_delete-card", {});
 profilePopup.setEventListeners();
 popupDelete.setEventListeners();
-
-//const avatarPopupValidator = new FormValidator(validationConfig, popupAvatarForm);
 
 const cardSection = new Section(
   {

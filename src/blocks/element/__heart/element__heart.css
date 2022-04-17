@@ -1,13 +1,4 @@
 .element__heart {
-  /*margin-right: 20px;
-  width: 22px;
-  height: 19px;
-  background-image: url(../../../images/like.svg);
-  border: none;
-  background-color: transparent;
-  transition: .2s;
-  outline: none;*/
-
   background-image: url(../../../images/like.svg);
   min-width: 22px;
   height: 19px;
@@ -21,7 +12,5 @@
 }
 
 .element__heart:hover {
-  /*opacity: .5;*/
   opacity: 0.6;
-  /*cursor: pointer;*/
 }
