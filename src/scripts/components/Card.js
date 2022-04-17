@@ -57,7 +57,9 @@ export class Card {
     this._elementHeart.classList.toggle('element__heart_active');
   }
   deleteCard() {
-    this._elementDeleteCard.closest('.element').remove();
+    //this._elementDeleteCard.closest('.element').remove();
+    this._element.remove();
+    this._element = null;
   }
 
   _setEventListeners() {
