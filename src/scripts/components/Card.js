@@ -1,5 +1,5 @@
 export class Card {
-  constructor(text, image, likes, _id, userId, ownedId, cardTemplateSelector, handleCardClick, handleDeleteClick, handleLikeClick) {
+  constructor(text, image, likes, _id, userId, ownedId, cardTemplateSelector, handleCardClick, handleDeleteClick, handleLikeClick, handleLikeRemove) {
     this._text = text;
     this._image = image;
     this._cardTemplateSelector = cardTemplateSelector;
@@ -10,6 +10,7 @@ export class Card {
     this._userId = userId;
     this._ownerId = ownedId;
     this._handleLikeClick = handleLikeClick;
+    this._handleLikeRemove = handleLikeRemove;
   }
   _getTemplate() {
     const cardItem = document
@@ -57,7 +58,6 @@ export class Card {
     this._elementHeart.classList.toggle('element__heart_active');
   }
   deleteCard() {
-    //this._elementDeleteCard.closest('.element').remove();
     this._element.remove();
     this._element = null;
   }
